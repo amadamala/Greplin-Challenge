@@ -3,16 +3,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /*
- 	Level 2
-	----------------------------------------
-	Enter the password to access level 3:
 	Step 1. Use your code to compute the smallest prime fibonacci number
 	        greater than 227,000.  Call this number X.
-	
 	Step 2. The password for level 3 is the sum of prime divisors of X + 1.
-	
-	
-	The Greplin Programming Challenge
  */
 public class FirstPrimeFibonacciLargerThanGivenNumber {
 
@@ -55,7 +48,6 @@ public class FirstPrimeFibonacciLargerThanGivenNumber {
 		return sum;
 	}
 	
-	public static boolean isPrime(long n) {
 		boolean prime = true;
 		for (long i = 3; i <= Math.sqrt(n); i += 2)
 			if (n % i == 0) {
