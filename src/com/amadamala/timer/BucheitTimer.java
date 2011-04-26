@@ -8,21 +8,6 @@ public class BucheitTimer{
 	public static ArrayList<HashMap> insertOrder = new ArrayList<HashMap>();
 	private static final int LINE_LENGTH = 100;
 
-
-	public static void main(String[] args) {
-//		//BucheitTimer bt = new BucheitTimer();
-//		recordTimeWithTag("before sleep");
-//		try {
-//			Thread.sleep(400);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		recordTimeWithTag("after sleep");
-//		
-//		finishAndReport();
-	}
-
 	public static void recordTimeWithTag(String tag) {
 		HashMap<String, Object> timeRec = new HashMap<String, Object>();
 		timeRec.put("time", new Long(System.nanoTime()));
