@@ -26,7 +26,6 @@ import com.amadamala.timer.BucheitTimer;
 			for (int j = (i + 1); j < str.length(); j++) {
 				 t = str.substring(i, j + 1);
 				 
-				 // alt-2
 				 if(isPoly(t) == true && t.length() > maxLen) {
 					 maxIdx = idx;
 					 maxLen = t.length();
