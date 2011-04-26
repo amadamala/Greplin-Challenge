@@ -19,8 +19,8 @@ public class SubsetsOfNumbersLargestNumber {
 	
 	public static void main(String[] args) {
 		String s = "";
-		for(int i = 0; i < list.length; i++) { // -1 because last number is the biggest
-			char t = (char)(i + CHAR_BASE);		   // hack because I know there will be only 22 items
+		for(int i = 0; i < list.length; i++) {  // -1 because last number is the biggest
+			char t = (char)(i + CHAR_BASE);	    // hack because I know there will be only 22 items
 			m.put(t, list[i]);
 			s += t;
 		}
