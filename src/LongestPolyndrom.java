@@ -19,7 +19,7 @@ class LongestPolyndrom {
 		int maxIdx = 0;
 		String bigPoly = null;
 
-		for (int i = 0; i < str.length() - 1; i++) {
+		for (int i = 0; i < str.length() - 1; i++)
 			for (int j = (i + 1); j < str.length(); j++) {
 				t = str.substring(i, j + 1);
 				if (isPoly(t) && t.length() > maxLen) {
@@ -28,7 +28,7 @@ class LongestPolyndrom {
 					bigPoly = t;
 				}
 			}
-		}
+
 		System.out.println("longest polyndrom: \"" + bigPoly + "\" at "
 				+ maxIdx + " with length " + maxLen);
 	}
@@ -36,11 +36,9 @@ class LongestPolyndrom {
 	/* Return true if the input is polyndrom */
 	public static boolean isPoly(String s) {
 		int l = s.length();
-		for (int i = 0; i < (l / 2); i++) {
-			if (s.charAt(i) != s.charAt(l - (i + 1))) {
+		for (int i = 0; i < (l / 2); i++)
+			if ( s.charAt(i) != s.charAt(l - (i + 1)) )
 				return false;
-			}
-		}
 		return true;
 	}
 }

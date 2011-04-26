@@ -24,7 +24,6 @@ public class BucheitTimer{
 	}
 
 	public static void recordTimeWithTag(String tag) {
-		@SuppressWarnings("serial")
 		HashMap<String, Object> timeRec = new HashMap<String, Object>();
 		timeRec.put("time", new Long(System.nanoTime()));
 		timeRec.put("tag", tag);
@@ -37,10 +36,8 @@ public class BucheitTimer{
 			if(i > 0) {
 				Long start = (Long)(insertOrder.get(i - 1)).get("time") ;
 				Long end = (Long)(insertOrder.get(i)).get("time") ;
-				
 				Long foo = (end - start);
 				long nanos = foo.longValue();
-				System.out.println(nanos);
 				String viz = repeat("|", nanos/1000000); 
 				System.out.println("PBTimer: Between '"+ (insertOrder.get(i-1)).get("tag") + "' and '"+ (insertOrder.get(i)).get("tag")+"':\n"+viz+"\n took "+((double)nanos/1000000000)+" s");
              }
@@ -52,9 +49,8 @@ public class BucheitTimer{
 		String result = "";
 		for (long i = 1; i <= times; i++) {
 			result += s;
-			if( i % LINE_LENGTH == 0) {
+			if( i % LINE_LENGTH == 0)
 				result += "\n";
-			}
 		}
 		return result;		
 	}	
