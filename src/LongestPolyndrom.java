@@ -7,18 +7,10 @@ import com.amadamala.timer.BucheitTimer;
 	public static String reverseStr;
 
 	public static void main(final String[] args) {
-		BucheitTimer.recordTimeWithTag("reverse str");
 		reverseStr = new StringBuffer(str).reverse().toString();
-
-//		for(int i = 1; i <= 10; i++) {
-//			if(i == 1) {
-//				BucheitTimer.recordTimeWithTag("search-" + i);
-//			}
-			search();
-//			BucheitTimer.recordTimeWithTag("search-" + i);
-//		}
-		
-		
+		BucheitTimer.recordTimeWithTag("before search");
+		search();
+		BucheitTimer.recordTimeWithTag("after search");
 		BucheitTimer.finishAndReport();
 	}
 
@@ -35,28 +27,11 @@ import com.amadamala.timer.BucheitTimer;
 				 t = str.substring(i, j + 1);
 				 
 				 // alt-2
-//				 if(isPoly(t) == true && t.length() > maxLen) {
-//					 maxIdx = idx;
-//					 maxLen = t.length();
-//					 bigPoly = t;
-//				 }
-				 
-				 //TODO: check the question whether it says polyndrom or not
-				 if(t.charAt(0) != t.charAt(t.length() - 1)) {
-					 continue;
+				 if(isPoly(t) == true && t.length() > maxLen) {
+					 maxIdx = idx;
+					 maxLen = t.length();
+					 bigPoly = t;
 				 }
-				 
-				 BucheitTimer.recordTimeWithTag("before index");
-				 idx = reverseStr.indexOf(t);
-				 BucheitTimer.recordTimeWithTag("after index");
-				 if (idx > 0) {
-					 if (t.length() > maxLen) {
-						 maxIdx = idx;
-						 maxLen = t.length();
-						 bigPoly = t;
-					 }
-				 }
-				 BucheitTimer.recordTimeWithTag("after logic");
 			}
 		}
 		System.out.println("longest polyndrom: \"" + bigPoly  + "\" at " 

@@ -41,8 +41,8 @@ public class BucheitTimer{
 				Long foo = (end - start);
 				long nanos = foo.longValue();
 				System.out.println(nanos);
-				String viz = repeat("|", nanos/1000); 
-				System.out.println("PBTimer: Between '"+ (insertOrder.get(i-1)).get("tag") + "' and '"+ (insertOrder.get(i)).get("tag")+"':\n"+viz+"\n took "+((double)foo/1000)+" s");
+				String viz = repeat("|", nanos/1000000); 
+				System.out.println("PBTimer: Between '"+ (insertOrder.get(i-1)).get("tag") + "' and '"+ (insertOrder.get(i)).get("tag")+"':\n"+viz+"\n took "+((double)nanos/1000000000)+" s");
              }
 		}
 	}
