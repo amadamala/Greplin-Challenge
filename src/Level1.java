@@ -13,7 +13,7 @@ class Level1 {
 
 	/* search the largest sub-string which is polyndrom. */
 	public static void search() {
-		String t
+		String t;
 		int idx = 0;
 		int maxLen = 0;
 		int maxIdx = 0;
@@ -29,7 +29,8 @@ class Level1 {
 				}
 			}
 
-		System.out.println("longest polyndrom: \"" + bigPoly + "\" at "				+ maxIdx + " with length " + maxLen);
+		System.out.println("longest polyndrom: \"" + bigPoly + "\" at "	
+				+ maxIdx + " with length " + maxLen);
 	}
 
 	/* Return true if the input is polyndrom */
