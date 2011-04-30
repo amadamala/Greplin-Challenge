@@ -7,7 +7,7 @@ import java.util.Set;
 	        greater than 227,000.  Call this number X.
 	Step 2. The password for level 3 is the sum of prime divisors of X + 1.
  */
-public class FirstPrimeFibonacciLargerThanGivenNumber {
+public class Level2 {
 
 	
 	public static void main(String[] args) {
@@ -48,6 +48,8 @@ public class FirstPrimeFibonacciLargerThanGivenNumber {
 		return sum;
 	}
 	
+	
+	public static boolean isPrime(long n) {
 		boolean prime = true;
 		for (long i = 3; i <= Math.sqrt(n); i += 2)
 			if (n % i == 0) {
